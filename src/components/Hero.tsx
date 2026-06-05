@@ -35,7 +35,7 @@ export function Hero() {
       style={{ background: "#030d1f" }}
     >
       {/* ── 3D Finland particle map ────────────────────────────── */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <HeroCanvas />
       </div>
 
