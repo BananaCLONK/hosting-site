@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -46,12 +46,12 @@ export function PrimaryButton({
         className={cn(
           "group relative inline-flex items-center gap-2 overflow-hidden",
           "transform-[translateZ(0)]",
-          "rounded-full bg-indigo-600 px-6 py-2.5",
+          "rounded-full bg-brand-600 px-6 py-2.5",
           "text-sm font-semibold text-white",
-          "shadow-md shadow-indigo-500/20",
+          "shadow-md shadow-brand-500/20",
           "outline-none focus:outline-none",
           "transition-shadow duration-200",
-          "hover:shadow-lg hover:shadow-indigo-500/30",
+          "hover:shadow-lg hover:shadow-brand-500/30",
           "disabled:pointer-events-none disabled:opacity-50",
           fullWidth && "w-full justify-center",
           className
@@ -106,7 +106,7 @@ export function SecondaryButton({
           "relative rounded-full p-px",
           "bg-slate-200",
           "transition-all duration-200",
-          "group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:via-violet-400 group-hover:to-indigo-400",
+          "group-hover:bg-gradient-to-r group-hover:from-brand-400 group-hover:via-brand-400 group-hover:to-brand-400",
           "shadow-sm group-hover:shadow-md group-hover:shadow-slate-200/80",
           fullWidth && "block w-full"
         )}
@@ -121,7 +121,7 @@ export function SecondaryButton({
             "rounded-full bg-white px-6 py-2.5",
             "text-sm font-semibold text-slate-700",
             "transition-colors duration-200",
-            "hover:text-slate-900",
+            "hover:text-brand-900",
             "disabled:pointer-events-none disabled:opacity-50",
             fullWidth && "w-full justify-center",
             className
@@ -165,7 +165,7 @@ export function GhostButton({
           "rounded-full px-3 py-2",
           "text-sm font-medium text-slate-500",
           "transition-colors duration-150",
-          "hover:text-slate-900",
+          "hover:text-brand-900",
           "disabled:pointer-events-none disabled:opacity-50",
           className
         )}
@@ -202,13 +202,13 @@ export function MegaMenuCtaPill({
         "rounded-full border border-slate-200 bg-white px-4 py-2",
         "text-xs font-semibold text-slate-600",
         "transition-colors duration-150",
-        "hover:border-cyan-300 hover:bg-blue-50 hover:text-indigo-700",
+        "hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700",
         "shadow-sm hover:shadow",
         className
       )}
     >
       {children}
-      <ArrowRight className="w-3 h-3 text-slate-400 group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all duration-150" />
+      <ArrowRight className="w-3 h-3 text-slate-400 group-hover:text-brand-500 group-hover:translate-x-0.5 transition-all duration-150" />
     </motion.a>
   );
 }

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
@@ -37,7 +37,7 @@ function StatCard({ label, value, suffix, icon: Icon, color }: {
       <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${color}`}>
         <Icon className="w-5 h-5 text-white" />
       </div>
-      <p className="text-3xl font-bold text-slate-900">
+      <p className="text-3xl font-bold text-brand-900">
         {animated.toLocaleString()}{suffix}
       </p>
       <p className="text-sm text-slate-500 mt-1">{label}</p>
@@ -69,7 +69,7 @@ export function Infrastructure() {
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
               Live infrastructure
             </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mt-3">
+            <h2 className="text-4xl font-bold text-brand-900 mt-3">
               Global network, local performance
             </h2>
             <p className="mt-4 text-lg text-slate-500">
@@ -80,8 +80,8 @@ export function Infrastructure() {
 
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          <StatCard label="Requests served today" value={liveRequests} suffix="" icon={Activity} color="bg-indigo-500" />
-          <StatCard label="Active servers" value={1_284} suffix="" icon={Server} color="bg-violet-500" />
+          <StatCard label="Requests served today" value={liveRequests} suffix="" icon={Activity} color="bg-brand-500" />
+          <StatCard label="Active servers" value={1_284} suffix="" icon={Server} color="bg-brand-500" />
           <StatCard label="Edge locations" value={94} suffix="" icon={Globe} color="bg-emerald-500" />
           <StatCard label="Avg. response time" value={12} suffix="ms" icon={Wifi} color="bg-amber-500" />
         </div>
@@ -94,7 +94,7 @@ export function Infrastructure() {
           className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden"
         >
           <div className="px-6 py-4 border-b border-slate-100 flex items-center justify-between">
-            <h3 className="font-semibold text-slate-900">Region status</h3>
+            <h3 className="font-semibold text-brand-900">Region status</h3>
             <div className="flex items-center gap-2 text-sm text-slate-400">
               <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               Updated just now
@@ -106,17 +106,17 @@ export function Infrastructure() {
                 <div className="flex items-center gap-3">
                   <span className={`w-2.5 h-2.5 rounded-full flex-shrink-0 ${region.status === "operational" ? "bg-emerald-500" : "bg-amber-400"}`} />
                   <div>
-                    <p className="text-sm font-medium text-slate-900">{region.name}</p>
+                    <p className="text-sm font-medium text-brand-900">{region.name}</p>
                     <p className="text-xs text-slate-400 capitalize">{region.status}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-8 text-sm">
                   <div className="text-right hidden sm:block">
-                    <p className="font-semibold text-slate-900">{region.ping}ms</p>
+                    <p className="font-semibold text-brand-900">{region.ping}ms</p>
                     <p className="text-xs text-slate-400">latency</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-semibold text-slate-900">{region.requests.toLocaleString()}</p>
+                    <p className="font-semibold text-brand-900">{region.requests.toLocaleString()}</p>
                     <p className="text-xs text-slate-400">req/day</p>
                   </div>
                   <Badge variant={region.status === "operational" ? "success" : "warning"}>
@@ -137,7 +137,7 @@ export function Infrastructure() {
           className="mt-6 bg-white rounded-2xl border border-slate-100 shadow-sm p-6"
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-semibold text-slate-900">90-day uptime history</h3>
+            <h3 className="font-semibold text-brand-900">90-day uptime history</h3>
             <span className="text-sm font-semibold text-emerald-600">99.98% avg</span>
           </div>
           <div className="flex gap-0.5 h-8">

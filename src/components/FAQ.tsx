@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Badge } from "@/components/ui/badge";
@@ -49,7 +49,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-slate-50 transition-colors"
       >
-        <span className="text-sm font-semibold text-slate-900 pr-4">{q}</span>
+        <span className="text-sm font-semibold text-brand-900 pr-4">{q}</span>
         <motion.div
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.2 }}
@@ -88,10 +88,10 @@ export function FAQ() {
             <Badge variant="default" className="mb-4">
               <HelpCircle className="w-3.5 h-3.5" /> FAQ
             </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mt-3">Frequently asked questions</h2>
+            <h2 className="text-4xl font-bold text-brand-900 mt-3">Frequently asked questions</h2>
             <p className="mt-4 text-lg text-slate-500">
               Everything you need to know before getting started. Can&apos;t find your answer?{" "}
-              <a href="#" className="text-indigo-600 font-medium hover:underline">Chat with us →</a>
+              <a href="#" className="text-brand-600 font-medium hover:underline">Chat with us →</a>
             </p>
           </motion.div>
         </div>

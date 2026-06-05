@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { PrimaryButton, SecondaryButton } from "@/components/Button";
@@ -32,7 +32,7 @@ const plans = [
     monthly: 29,
     annual: 23,
     badge: "Most popular",
-    color: "border-indigo-500",
+    color: "border-brand-500",
     cta: "Start free trial",
     ctaVariant: "primary" as const,
     features: [
@@ -90,7 +90,7 @@ export function Pricing() {
             <Badge variant="info" className="mb-4">
               <Zap className="w-3.5 h-3.5" /> Simple pricing
             </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mt-3">
+            <h2 className="text-4xl font-bold text-brand-900 mt-3">
               Choose the right plan
             </h2>
             <p className="mt-4 text-lg text-slate-500">
@@ -112,7 +112,7 @@ export function Pricing() {
                     {isActive && (
                       <motion.div
                         layoutId="billing-pill"
-                        className="absolute inset-0 rounded-full bg-slate-900 shadow-sm"
+                        className="absolute inset-0 rounded-full bg-brand-900 shadow-sm"
                         transition={{ type: "spring", stiffness: 420, damping: 34, mass: 0.8 }}
                       />
                     )}
@@ -152,13 +152,13 @@ export function Pricing() {
               )}
 
               <div className="mb-6">
-                <h3 className="text-lg font-bold text-slate-900">{plan.name}</h3>
+                <h3 className="text-lg font-bold text-brand-900">{plan.name}</h3>
                 <p className="text-sm text-slate-500 mt-1">{plan.description}</p>
               </div>
 
               <div className="mb-8">
                 <div className="flex items-end gap-1">
-                  <span className="text-4xl font-bold text-slate-900">
+                  <span className="text-4xl font-bold text-brand-900">
                     €{annual ? plan.annual : plan.monthly}
                   </span>
                   <span className="text-slate-400 mb-1">/mo</span>
@@ -193,7 +193,7 @@ export function Pricing() {
         {/* Bottom note */}
         <p className="text-center text-sm text-slate-400 mt-8">
           All plans include free domain registration for the first year. Questions?{" "}
-          <a href="#" className="text-indigo-600 font-medium hover:underline">Talk to sales →</a>
+          <a href="#" className="text-brand-600 font-medium hover:underline">Talk to sales →</a>
         </p>
       </div>
     </section>

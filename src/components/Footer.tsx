@@ -1,4 +1,4 @@
-import { Globe } from "lucide-react";
+﻿import { Globe } from "lucide-react";
 
 const footerLinks = {
   Product: ["Shared Hosting", "VPS Hosting", "Dedicated Servers", "Cloud Hosting", "WordPress Hosting", "Domain Registration"],
@@ -9,14 +9,14 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400">
+    <footer className="bg-brand-900 text-slate-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Top */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 pb-12 border-b border-brand-900/40">
           {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
                 <Globe className="w-5 h-5 text-white" />
               </div>
               <span className="text-lg font-bold text-white">NexaHost</span>
@@ -29,7 +29,7 @@ export function Footer() {
                 <a
                   key={s}
                   href="#"
-                  className="w-9 h-9 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center text-xs font-bold text-slate-400 hover:text-white transition-colors"
+                  className="w-9 h-9 bg-brand-900 hover:bg-brand-700 rounded-lg flex items-center justify-center text-xs font-bold text-slate-400 hover:text-white transition-colors"
                 >
                   {s}
                 </a>

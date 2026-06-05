@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+﻿import { cn } from "@/lib/utils";
 
 interface BadgeProps {
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export function Badge({ children, variant = "default", className }: BadgeProps) 
           "bg-emerald-50 text-emerald-700": variant === "success",
           "bg-amber-50 text-amber-700": variant === "warning",
           "bg-red-50 text-red-700": variant === "error",
-          "bg-indigo-50 text-indigo-700": variant === "info",
+          "bg-brand-50 text-brand-700": variant === "info",
         },
         className
       )}

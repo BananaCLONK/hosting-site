@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { PrimaryButton } from "@/components/Button";
@@ -32,7 +32,7 @@ export function Hero() {
   return (
     <section
       className="relative z-1 min-h-screen overflow-hidden"
-      style={{ background: "#030d1f" }}
+      style={{ background: "#1b3042" }}
     >
       {/* ── 3D Finland particle map ────────────────────────────── */}
       <div className="absolute inset-0 pointer-events-none">
@@ -45,7 +45,7 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to right, #030d1f 38%, rgba(3,13,31,0.75) 55%, rgba(3,13,31,0.1) 80%, transparent 100%)",
+            "linear-gradient(to right, #1b3042 38%, rgba(27,48,66,0.75) 55%, rgba(27,48,66,0.1) 80%, transparent 100%)",
         }}
       />
       {/* Bottom fade */}
@@ -53,7 +53,7 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to top, #030d1f 0%, transparent 35%)",
+            "linear-gradient(to top, #1b3042 0%, transparent 35%)",
         }}
       />
       {/* Top fade (under header) */}
@@ -61,7 +61,7 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(3,13,31,0.6) 0%, transparent 15%)",
+            "linear-gradient(to bottom, rgba(27,48,66,0.6) 0%, transparent 15%)",
         }}
       />
 
@@ -77,7 +77,7 @@ export function Hero() {
               transition={{ duration: 0.5 }}
             >
               <Badge
-                className="mb-6 bg-indigo-500/15 text-indigo-300 border border-indigo-500/30"
+                className="mb-6 bg-brand-500/15 text-brand-300 border border-brand-500/30"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 Trusted by 50,000+ businesses worldwide
@@ -92,7 +92,7 @@ export function Hero() {
               className="text-5xl sm:text-6xl font-bold text-white leading-tight tracking-tight"
             >
               Your business deserves{" "}
-              <span className="text-indigo-400">fast, reliable</span> hosting
+              <span className="text-brand-400">fast, reliable</span> hosting
             </motion.h1>
 
             {/* Description */}
@@ -245,7 +245,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 3.5 }}
             className="hidden lg:flex items-center gap-2 absolute bottom-8 right-8 text-xs text-slate-600"
           >
-            <Wifi className="w-3.5 h-3.5 text-indigo-500" />
+            <Wifi className="w-3.5 h-3.5 text-brand-500" />
             <span>NexaHost Nordic Infrastructure · 4 active regions</span>
           </motion.div>
         </div>

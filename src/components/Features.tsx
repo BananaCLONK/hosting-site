@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { motion } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -18,7 +18,7 @@ function DomainSearchMockup() {
       <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-2">
         <Search className="w-3.5 h-3.5 text-slate-400" />
         <span className="text-slate-400">acmecorp</span>
-        <span className="ml-auto text-indigo-600 font-semibold">Search</span>
+        <span className="ml-auto text-brand-600 font-semibold">Search</span>
       </div>
       {results.map((r) => (
         <div key={r.domain} className="flex items-center justify-between bg-white border border-slate-100 rounded-lg px-3 py-2">
@@ -27,7 +27,7 @@ function DomainSearchMockup() {
             <span className="font-medium text-slate-700">{r.domain}</span>
           </div>
           {r.ok ? (
-            <span className="text-indigo-600 font-semibold">{r.price}</span>
+            <span className="text-brand-600 font-semibold">{r.price}</span>
           ) : (
             <span className="text-slate-400">Taken</span>
           )}
@@ -40,8 +40,8 @@ function DomainSearchMockup() {
 /* ─── Hosting Usage Mockup ─── */
 function HostingUsageMockup() {
   const metrics = [
-    { label: "Storage", used: 14.2, total: 50, unit: "GB", color: "bg-indigo-500" },
-    { label: "Bandwidth", used: 187, total: 500, unit: "GB", color: "bg-violet-500" },
+    { label: "Storage", used: 14.2, total: 50, unit: "GB", color: "bg-brand-500" },
+    { label: "Bandwidth", used: 187, total: 500, unit: "GB", color: "bg-brand-500" },
     { label: "CPU", used: 23, total: 100, unit: "%", color: "bg-emerald-500" },
   ];
   return (
@@ -108,7 +108,7 @@ function BillingMockup() {
       <div className="flex items-center justify-between mb-4">
         <div>
           <p className="text-slate-500">Total spend</p>
-          <p className="text-xl font-bold text-slate-900 mt-0.5">€323.00</p>
+          <p className="text-xl font-bold text-brand-900 mt-0.5">€323.00</p>
         </div>
         <span className="flex items-center gap-1 text-emerald-600 font-semibold">
           <TrendingUp className="w-3.5 h-3.5" /> +12%
@@ -118,7 +118,7 @@ function BillingMockup() {
         {months.map((m, i) => (
           <div key={m} className="flex-1 flex flex-col items-center gap-1">
             <div
-              className="w-full rounded-t bg-indigo-500 opacity-80"
+              className="w-full rounded-t bg-brand-500 opacity-80"
               style={{ height: `${(values[i] / max) * 100}%` }}
             />
             <span className="text-slate-400">{m}</span>
@@ -137,7 +137,7 @@ const features = [
     title: "Find and register the perfect domain",
     description: "Search across 500+ TLDs instantly. One-click DNS management, auto-renewal, and free WHOIS privacy protection included with every domain.",
     mockup: <DomainSearchMockup />,
-    accent: "from-indigo-50 to-blue-50",
+    accent: "from-brand-50 to-blue-50",
   },
   {
     icon: Server,
@@ -179,7 +179,7 @@ export function Features() {
             <Badge variant="info" className="mb-4">
               <Zap className="w-3.5 h-3.5" /> Everything you need
             </Badge>
-            <h2 className="text-4xl font-bold text-slate-900 mt-3 leading-tight">
+            <h2 className="text-4xl font-bold text-brand-900 mt-3 leading-tight">
               Built for modern businesses
             </h2>
             <p className="mt-4 text-lg text-slate-500">
@@ -205,7 +205,7 @@ export function Features() {
               </div>
 
               <Badge variant="default" className="mb-3">{feat.badge}</Badge>
-              <h3 className="text-xl font-bold text-slate-900 mb-2 leading-snug">{feat.title}</h3>
+              <h3 className="text-xl font-bold text-brand-900 mb-2 leading-snug">{feat.title}</h3>
               <p className="text-sm text-slate-500 mb-6 leading-relaxed">{feat.description}</p>
 
               {/* Embedded Mockup */}
@@ -228,7 +228,7 @@ export function Features() {
             { icon: Activity, label: "Sub-10ms global DNS" },
           ].map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-              <Icon className="w-5 h-5 text-indigo-500 flex-shrink-0" />
+              <Icon className="w-5 h-5 text-brand-500 flex-shrink-0" />
               <span className="text-sm font-medium text-slate-700">{label}</span>
             </div>
           ))}

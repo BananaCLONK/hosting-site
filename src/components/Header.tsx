@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
@@ -21,17 +21,17 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
               <Globe className="w-5 h-5 text-white" />
             </div>
-            <span className="text-lg font-bold text-slate-900">NexaHost</span>
+            <span className="text-lg font-bold text-brand-900">NexaHost</span>
           </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <div key={link.label} className="relative group">
-                <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-50 transition-colors">
+                <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-slate-600 hover:text-brand-900 rounded-lg hover:bg-slate-50 transition-colors">
                   {link.label}
                   {link.children && <ChevronDown className="w-3.5 h-3.5" />}
                 </button>
@@ -42,7 +42,7 @@ export function Header() {
                         <a
                           key={child}
                           href="#"
-                          className="block px-3 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
+                          className="block px-3 py-2 text-sm text-slate-600 hover:text-brand-900 hover:bg-slate-50 rounded-lg transition-colors"
                         >
                           {child}
                         </a>
@@ -81,7 +81,7 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="block px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
+              className="block px-3 py-2.5 text-sm font-medium text-slate-700 hover:text-brand-900 hover:bg-slate-50 rounded-lg transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
