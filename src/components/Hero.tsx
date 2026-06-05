@@ -31,11 +31,11 @@ export function Hero() {
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden"
+      className="relative z-1 min-h-screen overflow-hidden"
       style={{ background: "#030d1f" }}
     >
       {/* ── 3D Finland particle map ────────────────────────────── */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none">
         <HeroCanvas />
       </div>
 
