@@ -291,13 +291,8 @@ export function Navbar({ items }: NavbarProps) {
         <div className="flex items-center h-14 gap-1">
 
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 flex-shrink-0 mr-2">
-            <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
-              <Globe className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-[15px] font-bold text-brand-900 hidden sm:block tracking-tight">
-              NexaHost
-            </span>
+          <a href="/" className="flex items-center flex-shrink-0 mr-2">
+            <img src="/logo.svg" alt="NordicHost" className="h-7" />
           </a>
 
           {/* Desktop links — index from map() drives direction logic */}
