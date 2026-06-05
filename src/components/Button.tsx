@@ -46,12 +46,12 @@ export function PrimaryButton({
         className={cn(
           "group relative inline-flex items-center gap-2 overflow-hidden",
           "transform-[translateZ(0)]",
-          "rounded-full bg-brand-600 px-6 py-2.5",
+          "rounded-full bg-[#0F243E] px-6 py-2.5",
           "text-sm font-semibold text-white",
-          "shadow-md shadow-brand-500/20",
+          "shadow-md shadow-[#0F243E]/30",
           "outline-none focus:outline-none",
-          "transition-shadow duration-200",
-          "hover:shadow-lg hover:shadow-brand-500/30",
+          "transition-all duration-200",
+          "hover:bg-[#0d1f35] hover:shadow-lg hover:shadow-[#0F243E]/40",
           "disabled:pointer-events-none disabled:opacity-50",
           fullWidth && "w-full justify-center",
           className
