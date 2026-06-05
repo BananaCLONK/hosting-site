@@ -97,7 +97,7 @@ export function ServerDot({ server }: Props) {
       <Html
         center
         distanceFactor={14}
-        position={[0.3, 0.18, 0]}
+        position={[1.0, 0.18, 0]}
         style={{ pointerEvents: "none", userSelect: "none" }}
       >
         <div
