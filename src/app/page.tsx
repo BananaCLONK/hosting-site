@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { MENU_ITEMS } from "@/config/navigation";
 import { Hero } from "@/components/Hero";
+import { SocialProof } from "@/components/SocialProof";
+import { Trust } from "@/components/Trust";
 import { Features } from "@/components/Features";
 import { Pricing } from "@/components/Pricing";
 import { Infrastructure } from "@/components/Infrastructure";
@@ -13,6 +15,8 @@ export default function Home() {
     <main>
       <Navbar items={MENU_ITEMS} />
       <Hero />
+      <SocialProof />
+      <Trust />
       <Features />
       <Pricing />
       <Infrastructure />

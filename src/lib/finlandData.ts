@@ -19,20 +19,28 @@ export const FINLAND_POLYGON: [number, number][] = [
 
   // West coast (Gulf of Bothnia), south → north
   [21.3, 60.7], [21.2, 61.0], [21.0, 61.5], [21.0, 62.0],
-  [21.0, 62.5], [21.0, 63.0], [21.2, 63.5], [21.5, 64.0],
-  [21.8, 64.5], [22.5, 65.0],
-  [24.0, 65.5], // Oulu/Kemi coast bulges east
+  [21.2, 62.5], // Kristiinankaupunki
+  [22.4, 63.0], // Vaasa
+  [22.8, 63.5], // Jakobstad/Kokkola
+  [23.9, 64.1], // Kalajoki
+  [24.4, 64.6], // Raahe
+  [24.5, 65.0], // Oulu coast
   [24.1, 65.8], // Tornio — Swedish border starts
 
-  // Swedish border (NW toward Norway)
-  [23.8, 66.2], [23.5, 66.8], [23.0, 67.3],
-  [22.5, 67.8], [22.0, 68.2], [21.0, 68.6],
-  [20.8, 69.0], // Kilpisjärvi — Norwegian border starts
+  // Swedish border (NW toward Norway) — follows Torne/Muonio rivers
+  [24.0, 66.2], [24.0, 66.8], // Pello area
+  [23.8, 67.3], // Kolari
+  [23.6, 67.8], // Muonio
+  [23.4, 68.1], // approaching Enontekiö
+  [22.5, 68.4], // sharp bend NW — käsivarsi starts here
+  [21.3, 68.7], // narrow arm
+  [20.6, 69.0], // Kilpisjärvi tip — Norwegian border starts
 
   // Norwegian border (NE to Nuorgam)
-  [21.0, 69.2], [22.0, 69.4], [23.0, 69.5],
-  [24.0, 69.6], [25.0, 69.8], [26.0, 70.0],
-  [27.0, 70.0], [27.9, 70.1], // Nuorgam — northernmost
+  [20.8, 69.3], [21.5, 69.5],
+  [22.5, 69.6], [23.5, 69.7],
+  [24.5, 69.8], [25.5, 69.9], [26.5, 70.0],
+  [27.3, 70.1], [27.9, 70.1], // Nuorgam — northernmost
 
   // North arm eastern side, going south
   [28.2, 69.8], [28.5, 69.2], [29.0, 68.8],

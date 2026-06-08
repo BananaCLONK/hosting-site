@@ -29,6 +29,34 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@property --border-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-spin {
+  to { --border-angle: 360deg; }
+}
+
+.hero-card-border {
+  background: conic-gradient(
+    from var(--border-angle),
+    rgba(27,173,195,0.08)  0deg,
+    rgba(75,190,206,0.55)  70deg,
+    rgba(200,240,245,0.75) 90deg,
+    rgba(75,190,206,0.55)  110deg,
+    rgba(27,173,195,0.08)  180deg,
+    rgba(27,173,195,0.06)  360deg
+  );
+  animation: border-spin 30s linear infinite;
+}
+
+@keyframes gradient-sweep {
+  0%   { background-position: 0%   center; }
+  100% { background-position: 200% center; }
+}
+
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
@@ -37,3 +65,4 @@ body {
 .animate-pulse-dot {
   animation: pulse-dot 2s ease-in-out infinite;
 }
+

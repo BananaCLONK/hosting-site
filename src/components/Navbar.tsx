@@ -287,7 +287,7 @@ export function Navbar({ items }: NavbarProps) {
       onMouseLeave={scheduleClose}
     >
       {/* ── Floating navbar ─────────────────────────────────────────────────── */}
-      <nav className="max-w-7xl mx-auto bg-white border border-slate-100 shadow-sm rounded-2xl px-4 md:px-5">
+      <nav className="max-w-7xl mx-auto bg-white/60 backdrop-blur-2xl border border-white/70 shadow-sm rounded-2xl px-4 md:px-5">
         <div className="flex items-center h-14 gap-1">
 
           {/* Logo */}
@@ -345,7 +345,7 @@ export function Navbar({ items }: NavbarProps) {
               <GhostButton href="#" arrow={false}>Kirjaudu</GhostButton>
             </span>
 
-            <PrimaryButton arrow>Aloita</PrimaryButton>
+            <PrimaryButton href="/tilaa" arrow>Aloita</PrimaryButton>
 
             {/* Hamburger */}
             <button

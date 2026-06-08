@@ -1,4 +1,5 @@
 ﻿"use client";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -29,7 +30,37 @@ export function PrimaryButton({
   disabled,
   fullWidth,
 }: ButtonProps) {
-  const Tag = href ? "a" : "button";
+  const cls = cn(
+    "group relative inline-flex items-center gap-2 overflow-hidden",
+    "transform-[translateZ(0)]",
+    "rounded-full bg-[#0F243E] px-6 py-2.5",
+    "text-sm font-semibold text-white",
+    "shadow-md shadow-[#0F243E]/30",
+    "outline-none focus:outline-none",
+    "transition-all duration-200",
+    "hover:bg-[#0d1f35] hover:shadow-lg hover:shadow-[#0F243E]/40",
+    "disabled:pointer-events-none disabled:opacity-50",
+    fullWidth && "w-full justify-center",
+    className
+  );
+
+  const inner = (
+    <>
+      <span
+        aria-hidden
+        className={cn(
+          "pointer-events-none absolute inset-0 -translate-x-full",
+          "bg-linear-to-r from-transparent via-white/20 to-transparent",
+          "transition-transform duration-500 ease-in-out",
+          "group-hover:translate-x-full"
+        )}
+      />
+      <span className="relative">{children}</span>
+      {arrow && (
+        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
+      )}
+    </>
+  );
 
   return (
     <motion.div
@@ -38,42 +69,11 @@ export function PrimaryButton({
       whileTap={{ scale: 0.97 }}
       transition={{ duration: 0.18, ease: "easeOut" }}
     >
-      <Tag
-        href={href}
-        onClick={onClick}
-        type={type}
-        disabled={disabled}
-        className={cn(
-          "group relative inline-flex items-center gap-2 overflow-hidden",
-          "transform-[translateZ(0)]",
-          "rounded-full bg-[#0F243E] px-6 py-2.5",
-          "text-sm font-semibold text-white",
-          "shadow-md shadow-[#0F243E]/30",
-          "outline-none focus:outline-none",
-          "transition-all duration-200",
-          "hover:bg-[#0d1f35] hover:shadow-lg hover:shadow-[#0F243E]/40",
-          "disabled:pointer-events-none disabled:opacity-50",
-          fullWidth && "w-full justify-center",
-          className
-        )}
-      >
-        {/* Shimmer sweep */}
-        <span
-          aria-hidden
-          className={cn(
-            "pointer-events-none absolute inset-0 -translate-x-full",
-            "bg-gradient-to-r from-transparent via-white/20 to-transparent",
-            "transition-transform duration-500 ease-in-out",
-            "group-hover:translate-x-full"
-          )}
-        />
-
-        <span className="relative">{children}</span>
-
-        {arrow && (
-          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
-        )}
-      </Tag>
+      {href ? (
+        <Link href={href} className={cls}>{inner}</Link>
+      ) : (
+        <button onClick={onClick} type={type} disabled={disabled} className={cls}>{inner}</button>
+      )}
     </motion.div>
   );
 }
